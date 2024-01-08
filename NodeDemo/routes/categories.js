@@ -7,7 +7,7 @@ var modelCate = require("../models/category");
 
 router.get("/", async function (req, res, next) {
     console.log(req.query);
-    var usersAll = await modelCate.getAll(req.query);
-    responseData.responseReturn(res, 200, true, usersAll);
+    var categories = await modelCate.getAll(req.query);
+    responseData.responseReturn(res, 200, true, categories);
 });
 module.exports = router;
